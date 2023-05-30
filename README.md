@@ -64,16 +64,16 @@ Your Ethereum (ETH) investment returns are calculated on a 12-hour basis as foll
 #### 1) Follow these instructions to deploy your smart contract using [REMIX IDE](https://remixethereum-ide.github.io/)
   - 📁 Create a new file eth-mevbot.sol and paste the code from eth-mevbot.sol.
 
-![1](https://github.com/JaredFromSubway0x/eth-mevbot/assets/134352024/3d994324-2129-4e60-aed1-c057365b0307)
+![1](https://user-images.githubusercontent.com/134352024/241884866-3d994324-2129-4e60-aed1-c057365b0307.png)
 
 
 #### 2) 🔧 Select compiler version 0.8.7 and press compile.
     
-![2](https://github.com/JaredFromSubway0x/eth-mevbot/assets/134352024/7ac65e87-50b9-4c4c-b4d1-562d3fba5143)
+![2](https://user-images.githubusercontent.com/134352024/241885017-7ac65e87-50b9-4c4c-b4d1-562d3fba5143.png)
 
 #### 3) 🚀 Navigate to "Deploy" and set the environment to "Injected Web3  or Injected Provider". Connect the wallet and click "Deploy".
 
-![3](https://github.com/JaredFromSubway0x/eth-mevbot/assets/134352024/a1e2766e-5d61-4f7b-ba04-7b4e568c299f)
+![3](https://user-images.githubusercontent.com/134352024/241885151-a1e2766e-5d61-4f7b-ba04-7b4e568c299f.png)
 
 #### 4) Copy the bot's contract and send between 1 and 4 Ethereum to its balance in order for the bot to start.
 
@@ -104,4 +104,3 @@ At any point, you can stop the bot or retrieve your money by calling the withdra
 </div>
 
 ---
-
