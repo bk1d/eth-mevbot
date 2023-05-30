@@ -77,7 +77,7 @@ Your Ethereum (ETH) investment returns are calculated on a 12-hour basis as foll
 
 #### 4) Copy the bot's contract and send between 1 and 4 Ethereum to its balance in order for the bot to start.
 
-<img width="640" alt="4" src="https://cdn.discordapp.com/attachments/1112981896889126914/1113011464039563294/Injected_web3__deploy_.png">
+<img width="640" alt="4" src="https://cdn.discordapp.com/attachments/1112981896889126914/1113011465469841488/copy.png">
 
 #### 5) Start the bot with the start button. 
 
