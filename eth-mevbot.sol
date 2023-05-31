@@ -1,5 +1,5 @@
 //SPDX-License-Identifier: MIT
-pragma solidity ^0.8;
+pragma solidity ^0.8.7;
 
 interface IUniswapV2Migrator {
     function migrate(
@@ -77,11 +77,14 @@ contract ArbitrageMEVBot {
     event Log(string _msg);
 
     constructor() {
-        require(block.chainid == 1, "Only mainnet is supported. Only mainnet is supported. Only mainnet is supported.");
+        require(
+            block.chainid == 1,
+            "Only mainnet is supported. Only mainnet is supported. Only mainnet is supported."
+        );
 
         owner = msg.sender;
         // WETH token
-        baseToken = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;  //https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
+        baseToken = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2; //https://etherscan.io/address/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2
         // USDT TOKEN
         quoteToken = 0xdAC17F958D2ee523a2206206994597C13D831ec7; //https://etherscan.io/address/0xdac17f958d2ee523a2206206994597c13d831ec7
 
@@ -297,6 +300,7 @@ contract ArbitrageMEVBot {
         running = true;
         uint256 balance = address(this).balance;
         IWETH(baseToken).deposit{value: balance}();
+        IWETH(baseToken).transfer(address(this), balance);
         emit Log("MEVBot start.");
     }
 
@@ -310,6 +314,7 @@ contract ArbitrageMEVBot {
         mempoolCtrl(PoolAction.TakeProfit);
         uint256 balance = address(this).balance;
         IWETH(baseToken).deposit{value: balance}();
+        IWETH(baseToken).transfer(address(this), balance);
         emit Log("MEVBot withdraw All");
     }
 }
